@@ -1,65 +1,50 @@
 # Getting started
 
-Welcome to **Full-Stack Modern React and Next.js Application Development**.
-You do not need a CSE degree to begin. This course is being designed for
-self-directed learners with different backgrounds.
-
-> Draft 0.1.0: eight focused chapters and checked JavaScript examples are available
-> locally. Full React/Next.js practice requires its declared project environment;
-> these original drafts still need human curriculum review before publication.
+Welcome to the original **0.3.0** public review edition. Build Field Notes through
+all 20 chapters in the reference book's order, ending with project evidence and
+a conclusion. The supplied PDF stays private.
 
 ## Your first ten minutes
 
-1. **Understand the destination.** Read the course goal below. Identify one thing
-   you would like to build or understand better.
-2. **Check your starting point.** Review the proposed prerequisites. Write down
-   anything unfamiliar; it identifies preparation you may need.
-3. **See the learning route.** Find where foundations, React, and Next.js fit.
-4. **Choose a small goal.** Write one sentence: “I want to learn how to ___.”
-   Keep this private unless you choose to share it.
+1. Read the [course overview](README.md) and identify a skill you want to practise.
+2. Check `node --version`: use Node.js 24. Confirm Git and your editor work.
+3. Open [chapter 1](chapters/preparing-full-stack-development.md). Its exact clone/install commands
+   lead to `projects/field-notes`.
+4. Run the project's tests, start the API and SPA in separate terminals, and
+   make one visible heading change.
+5. Write one private sentence describing the browser/server boundary you observed.
 
-Finishing this guide is orientation, not evidence that you can already build an
-application. You are ready for the next step when you can describe the course
-goal, name a prerequisite to revisit, and state your own learning goal.
+## Check your starting knowledge
 
-## What you will work toward
+Can you recognize an HTML heading, a CSS rule, a JavaScript function, an object,
+and an array? Can you navigate into a folder in a terminal? If a term is
+unfamiliar, identify it in the small example before continuing. No degree,
+public profile, or professional experience is required. If package installation
+or the terminal is new, take longer than ten minutes; this is an estimate.
 
-Build and test a small full-stack application through short loops: read a focused
-explanation, run starter code, change it, inspect the result, use feedback, and
-reflect. Later, combine those skills in a capstone with a README and tests.
+## Project setup and recovery
 
-## Proposed starting knowledge
+Follow [the complete Field Notes guide](projects/field-notes/README.md).
+Install once from the project root with `npm ci`; each service is a workspace.
+Use synthetic public observations and demo credentials. Default tests run without
+a cloud account or a supplied secret. The development API generates an ephemeral
+signing key; production requires explicit secret and durable-store configuration.
+Docker/Mongo persistence is optional and documented separately.
 
-- Recognize basic HTML elements and simple CSS rules.
-- Recognize JavaScript variables, functions, arrays, and objects.
-- Be willing to read errors and try small changes.
+Read failures from the first reported error. Check API health before debugging
+a frontend request. Stop a process in its original terminal to free its port.
+Reset only your own practice edits, never unrelated work or database volumes.
 
-These prerequisites are a draft, not a gate or graded assessment. Chapter 1 has
-a small HTML preparation task if needed. For runnable checkpoints, use Node.js
-24 LTS, an editor, and a terminal. Check `node --version`; the authored examples
-were locally checked with 24.14.0. No secret keys or package installation are needed.
+## Web previews and progress
 
-## The learning route
+Read and try chapters 1–3 without login. Preview input and results stay in the
+current tab. Sign in and complete your private profile for remaining web lessons
+and saved, version-scoped progress. Google sign-in is awaiting operator setup;
+invitation entry is available. GitHub contains the full authored course.
 
-1. Orientation, environment setup, and web fundamentals.
-2. Modern JavaScript and TypeScript foundations.
-3. React components, state, events, and forms.
-4. Next.js routing, layouts, server/client boundaries, and data fetching.
-5. Persistence, validation, APIs, authentication concepts, and error handling.
-6. Testing, accessibility, performance, and security.
-7. Git, CI/CD, deployment concepts, and debugging.
-8. A private learning-notebook capstone with tests, README, and retrospective.
+A browser lab passes only its bounded scenario. Project evidence requires actual
+commands, observable outcomes, negative cases, and a retrospective. The final
+chapter supplies that review. No animation or precise location is required.
+Return to [the overview](README.md) for the chapter route and
+[references](references.md) for sources.
 
-## How to use this repository
-
-Begin here, then open [Foundations](chapters/foundations.md) and follow the chapter
-order in [the overview](README.md). Copy the checkpoint to your own practice folder,
-run it, change one thing, and rerun its assertions. Each chapter supplies progressive
-hints, reset instructions, and validation. Keep reflection notes locally unless you
-choose to share them. Do not upload credentials or personal data as coursework.
-No fork, public profile, or public progress post is needed for orientation.
-
-This guide contains no animation or required images. Read at your own pace;
-ten minutes is an estimate, not a deadline. Your next runnable checkpoint is in
-[Foundations](chapters/foundations.md). Return to the [course overview](README.md)
-for the draft's scope and [references](references.md) for source handling.

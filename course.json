@@ -1,176 +1,586 @@
 {
   "schemaVersion": 1,
   "id": "full-stack-modern-react-nextjs",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "status": "draft",
   "title": "Full-Stack Modern React and Next.js Application Development",
-  "description": "An original draft learning route: eight focused chapters with dependency-free JavaScript checkpoints and explicit React/Next.js practice extensions. Checkpoints demonstrate limited concepts; a complete framework capstone remains learner project work and requires its declared environment.",
+  "description": "Build Field Notes through 20 book-aligned chapters: REST, MongoDB, React, Docker, JWT, server rendering, SEO, tests, analytics, GraphQL, realtime events, and Next.js. Original tutorials, runnable project code, browser practice, and a capstone conclusion.",
   "locale": "en",
   "level": "beginner-to-intermediate",
-  "tags": ["javascript", "typescript", "react", "nextjs", "accessibility", "full-stack"],
-  "prerequisites": ["Recognize basic HTML and CSS", "Recognize JavaScript variables and functions", "Use an editor and navigate a folder"],
-  "learningOutcomes": ["Transform and validate data with observable checks", "Describe and practice React state and event handling", "Choose Next.js routing and server/client boundaries", "Build and review a local learning-notebook capstone"],
-  "accessibilityNotes": ["All essential content is text with static diagrams", "Hints use native disclosure controls", "Optional decorative GIFs are collapsed and play once for 2.4 seconds; GitHub cannot apply OS reduced-motion settings to GIFs", "No animation, precise location, or public profile is required", "Framework exercises require keyboard and mobile review"],
+  "tags": [
+    "javascript",
+    "typescript",
+    "react",
+    "nextjs",
+    "accessibility",
+    "full-stack"
+  ],
+  "prerequisites": [
+    "Recognize basic HTML and CSS",
+    "Recognize JavaScript variables and functions",
+    "Use an editor and navigate a folder"
+  ],
+  "learningOutcomes": [
+    "Build and test a private note workflow across UI, API, and owner-scoped storage",
+    "Model asynchronous data, GraphQL mutations, and realtime replay with explicit failure states",
+    "Choose React and Next.js boundaries, metadata, and caching policies",
+    "Validate inputs, authorization, privacy, accessibility, and release gates with evidence"
+  ],
+  "accessibilityNotes": [
+    "Text-first chapters and native progressive hints",
+    "Keyboard controls with visible focus and readable code blocks",
+    "Decorative sky has pause/resume and reduced-motion static behavior",
+    "No exact location or public profile is required",
+    "Project exercises require keyboard and narrow-screen checks"
+  ],
   "chapters": [
     {
-      "id": "foundations",
-      "title": "Foundations: make one observable change",
-      "summary": "Orientation, environment checks, browser/server distinctions, and the first component learning loop.",
-      "estimatedMinutes": 35,
-      "objectives": ["Describe browser, server, and file responsibilities", "Run and change a JavaScript checkpoint", "Connect a heading to a component"],
-      "prerequisites": ["Recognize an HTML heading and a JavaScript string"],
-      "lessonPath": "chapters/foundations.md",
+      "id": "preparing-full-stack-development",
+      "title": "Preparing for Full-Stack Development",
+      "summary": "Set up an editor, Node.js, Git, and the original Field Notes project; make and verify a first React change.",
+      "estimatedMinutes": 60,
+      "objectives": [
+        "Distinguish browser, server, and storage responsibilities",
+        "Install and run the four-workspace project",
+        "Change a React heading and verify a production build"
+      ],
+      "prerequisites": [
+        "Basic HTML/CSS and JavaScript functions"
+      ],
+      "lessonPath": "chapters/preparing-full-stack-development.md",
       "exerciseId": "first-component"
     },
     {
-      "id": "javascript-typescript",
-      "title": "JavaScript data and TypeScript contracts",
-      "summary": "Immutable transformations, static types, and runtime checks with meaningful edge cases.",
-      "estimatedMinutes": 45,
-      "objectives": ["Transform arrays without changing originals", "Distinguish types from runtime validation", "Check invalid and successful inputs"],
-      "prerequisites": ["foundations"],
-      "lessonPath": "chapters/javascript-typescript.md"
+      "id": "nodejs-and-mongodb",
+      "title": "Getting to Know Node.js and MongoDB",
+      "summary": "Explore Node I/O, HTTP responses, document modeling, containers, and an optional MongoDB replica set.",
+      "estimatedMinutes": 90,
+      "objectives": [
+        "Compare Node and browser capabilities",
+        "Explain asynchronous I/O and document query order",
+        "Test memory lifetimes and optional Mongo persistence"
+      ],
+      "prerequisites": [
+        "preparing-full-stack-development"
+      ],
+      "lessonPath": "chapters/nodejs-and-mongodb.md",
+      "exerciseId": "node-and-data"
     },
     {
-      "id": "react-components",
-      "title": "React: describe the next interface",
-      "summary": "Props, state, transitions, events, and a labeled form practice extension.",
-      "estimatedMinutes": 55,
-      "objectives": ["Separate input, state, event, and output", "Compute immutable state transitions", "Connect a labeled control to UI changes"],
-      "prerequisites": ["javascript-typescript"],
-      "lessonPath": "chapters/react-components.md"
+      "id": "express-mongoose-and-jest",
+      "title": "Implementing a Backend Using Express, Mongoose ODM, and Jest",
+      "summary": "Build and test REST routes, schemas, service boundaries, and failure responses.",
+      "estimatedMinutes": 90,
+      "objectives": [
+        "Trace an Express request through validation and storage",
+        "Define HTTP success and failure contracts",
+        "Write Jest/Supertest cases for rejected writes"
+      ],
+      "prerequisites": [
+        "nodejs-and-mongodb"
+      ],
+      "lessonPath": "chapters/express-mongoose-and-jest.md",
+      "exerciseId": "api-contracts"
     },
     {
-      "id": "nextjs-routing",
-      "title": "Next.js: routes and execution boundaries",
-      "summary": "App Router routes and layouts, safe server/client props, and explicit data states.",
-      "estimatedMinutes": 55,
-      "objectives": ["Map route folders to URLs", "Choose server and client boundaries", "Represent empty and failure states"],
-      "prerequisites": ["react-components"],
-      "lessonPath": "chapters/nextjs-routing.md"
+      "id": "react-and-tanstack-query",
+      "title": "Integrating a Frontend Using React and TanStack Query",
+      "summary": "Connect React components, query identity, loading states, mutations, filtering, and sorting.",
+      "estimatedMinutes": 90,
+      "objectives": [
+        "Separate form state from server state",
+        "Use query identity and mutation invalidation",
+        "Add labeled search and sort controls"
+      ],
+      "prerequisites": [
+        "express-mongoose-and-jest"
+      ],
+      "lessonPath": "chapters/react-and-tanstack-query.md",
+      "exerciseId": "async-data"
     },
     {
-      "id": "data-and-forms",
-      "title": "Data, validation, persistence, and identity",
-      "summary": "Validate before writes, scope ownership to trusted identity, and state storage guarantees honestly.",
-      "estimatedMinutes": 60,
-      "objectives": ["Validate form values before writing", "Separate authentication and authorization", "Explain persistence and deletion boundaries"],
-      "prerequisites": ["nextjs-routing"],
-      "lessonPath": "chapters/data-and-forms.md"
+      "id": "docker-and-cicd",
+      "title": "Deploying the Application with Docker and CI/CD",
+      "summary": "Package the API, understand Compose and registry boundaries, and create a tested release workflow.",
+      "estimatedMinutes": 90,
+      "objectives": [
+        "Distinguish images, containers, volumes, registries, and hosts",
+        "Build a credential-free API image",
+        "Design checks and approval before deployment"
+      ],
+      "prerequisites": [
+        "react-and-tanstack-query"
+      ],
+      "lessonPath": "chapters/docker-and-cicd.md",
+      "exerciseId": "production-workflows"
     },
     {
-      "id": "quality-accessibility-security",
-      "title": "Quality: prove behavior and include people",
-      "summary": "Behavior tests, keyboard and form review, safe URL policies, and the limits of automated evidence.",
-      "estimatedMinutes": 55,
-      "objectives": ["Write a meaningful regression check", "Review labels, focus, and keyboard use", "Reject unsafe link schemes"],
-      "prerequisites": ["data-and-forms"],
-      "lessonPath": "chapters/quality-accessibility-security.md"
+      "id": "jwt-authentication",
+      "title": "Adding Authentication with JWT",
+      "summary": "Implement signup, login, password hashing, constrained JWT verification, and ownership checks.",
+      "estimatedMinutes": 90,
+      "objectives": [
+        "Explain hashing, signed claims, authentication, and authorization",
+        "Verify JWT algorithm, issuer, audience, and expiry",
+        "Prove another actor cannot modify a note"
+      ],
+      "prerequisites": [
+        "docker-and-cicd"
+      ],
+      "lessonPath": "chapters/jwt-authentication.md",
+      "exerciseId": "identity-and-access"
     },
     {
-      "id": "production-workflows",
-      "title": "Git, CI, deployment concepts, and recovery",
-      "summary": "Local diff review, reproducible checks, least privilege, release approval, and rollback rehearsal.",
-      "estimatedMinutes": 50,
-      "objectives": ["Review a local change before staging", "Explain reproducible CI checks", "Plan observation and rollback"],
-      "prerequisites": ["quality-accessibility-security"],
-      "lessonPath": "chapters/production-workflows.md"
+      "id": "server-side-rendering",
+      "title": "Improving the Load Time Using Server-Side Rendering",
+      "summary": "Inspect actual initial HTML, server-side data fetching, safe serialization, and hydration.",
+      "estimatedMinutes": 90,
+      "objectives": [
+        "Inspect content in initial HTML",
+        "Trace safe data serialization and hydration",
+        "Compare rendering behavior and measure its limits"
+      ],
+      "prerequisites": [
+        "jwt-authentication"
+      ],
+      "lessonPath": "chapters/server-side-rendering.md",
+      "exerciseId": "rendering-and-seo"
     },
     {
-      "id": "capstone",
-      "title": "Capstone: a private learning notebook",
-      "summary": "A bounded local app brief combining routes, forms, validated persistence, tests, accessibility, and a retrospective.",
-      "estimatedMinutes": 480,
-      "objectives": ["Build a complete local note workflow", "Collect tests and accessibility evidence", "Document limitations and release plans"],
-      "prerequisites": ["foundations", "javascript-typescript", "react-components", "nextjs-routing", "data-and-forms", "quality-accessibility-security", "production-workflows"],
-      "lessonPath": "chapters/capstone.md"
+      "id": "search-engine-optimization",
+      "title": "Making Sure Customers Find You with Search Engine Optimization",
+      "summary": "Create meaningful URLs, titles, canonical metadata, robots rules, sitemaps, and social previews.",
+      "estimatedMinutes": 90,
+      "objectives": [
+        "Design meaningful slugs and trusted canonical URLs",
+        "Inspect title, social, robots, and sitemap metadata",
+        "Separate public discovery from authorization"
+      ],
+      "prerequisites": [
+        "server-side-rendering"
+      ],
+      "lessonPath": "chapters/search-engine-optimization.md",
+      "exerciseId": "rendering-and-seo"
+    },
+    {
+      "id": "playwright-end-to-end-testing",
+      "title": "Implementing End-to-End Tests Using Playwright",
+      "summary": "Test a real browser journey with isolated fixtures, semantic locators, failure assertions, and evidence.",
+      "estimatedMinutes": 90,
+      "objectives": [
+        "Write role-based browser interactions",
+        "Isolate synthetic test accounts and datasets",
+        "Assert a rejected record remains absent"
+      ],
+      "prerequisites": [
+        "search-engine-optimization"
+      ],
+      "lessonPath": "chapters/playwright-end-to-end-testing.md",
+      "exerciseId": "quality-accessibility-security"
+    },
+    {
+      "id": "mongodb-and-victory-analytics",
+      "title": "Aggregating and Visualizing Statistics Using MongoDB and Victory",
+      "summary": "Aggregate note counts, handle UTC grouping, and render a chart with a table alternative.",
+      "estimatedMinutes": 90,
+      "objectives": [
+        "Define count units and UTC date groups",
+        "Trace a Mongo aggregation pipeline",
+        "Render equivalent chart and table values"
+      ],
+      "prerequisites": [
+        "playwright-end-to-end-testing"
+      ],
+      "lessonPath": "chapters/mongodb-and-victory-analytics.md",
+      "exerciseId": "learning-insights"
+    },
+    {
+      "id": "graphql-backend",
+      "title": "Building a Backend with a GraphQL API",
+      "summary": "Define and execute typed GraphQL queries and authenticated mutations with workload bounds.",
+      "estimatedMinutes": 90,
+      "objectives": [
+        "Define GraphQL fields and resolver context",
+        "Execute named queries and authenticated mutations",
+        "Explain workload bounds and authorization limits"
+      ],
+      "prerequisites": [
+        "mongodb-and-victory-analytics"
+      ],
+      "lessonPath": "chapters/graphql-backend.md",
+      "exerciseId": "graphql-api"
+    },
+    {
+      "id": "apollo-client-frontend",
+      "title": "Interfacing with GraphQL on the Frontend Using Apollo Client",
+      "summary": "Integrate Apollo queries, mutation variables, cache identity, loading, and error recovery.",
+      "estimatedMinutes": 90,
+      "objectives": [
+        "Configure Apollo providers and React hooks",
+        "Handle loading, errors, and empty results",
+        "Refresh a mutation result and clear caches on logout"
+      ],
+      "prerequisites": [
+        "graphql-backend"
+      ],
+      "lessonPath": "chapters/apollo-client-frontend.md",
+      "exerciseId": "graphql-client"
+    },
+    {
+      "id": "express-socketio-backend",
+      "title": "Building an Event-Based Backend Using Express and Socket.IO",
+      "summary": "Authenticate socket connections and acknowledge only committed, validated events.",
+      "estimatedMinutes": 90,
+      "objectives": [
+        "Authenticate Socket.IO connections",
+        "Derive room identity on the server",
+        "Acknowledge only committed idempotent work"
+      ],
+      "prerequisites": [
+        "apollo-client-frontend"
+      ],
+      "lessonPath": "chapters/express-socketio-backend.md",
+      "exerciseId": "realtime-server"
+    },
+    {
+      "id": "realtime-react-frontend",
+      "title": "Creating a Frontend to Consume and Send Events",
+      "summary": "Connect a React realtime view, clean up listeners, reconcile history, and explain disconnects.",
+      "estimatedMinutes": 90,
+      "objectives": [
+        "Manage socket effects and cleanup",
+        "Merge live and history events by stable identity",
+        "Explain disconnected, pending, and confirmed states"
+      ],
+      "prerequisites": [
+        "express-socketio-backend"
+      ],
+      "lessonPath": "chapters/realtime-react-frontend.md",
+      "exerciseId": "realtime-client"
+    },
+    {
+      "id": "mongodb-event-persistence",
+      "title": "Adding Persistence to Socket.IO Using MongoDB",
+      "summary": "Persist events transactionally, scope idempotency, and replay with a bounded cursor.",
+      "estimatedMinutes": 90,
+      "objectives": [
+        "Persist note and event in a Mongo transaction",
+        "Scope idempotency by author and client ID",
+        "Replay author-scoped history using bounded cursors"
+      ],
+      "prerequisites": [
+        "realtime-react-frontend"
+      ],
+      "lessonPath": "chapters/mongodb-event-persistence.md",
+      "exerciseId": "realtime-persistence"
+    },
+    {
+      "id": "getting-started-nextjs",
+      "title": "Getting Started with Next.js",
+      "summary": "Use App Router pages, layouts, dynamic routes, metadata, and route handlers.",
+      "estimatedMinutes": 90,
+      "objectives": [
+        "Use App Router pages, layouts, and dynamic params",
+        "Handle loading, errors, and missing records",
+        "Build and start the Next application"
+      ],
+      "prerequisites": [
+        "mongodb-event-persistence"
+      ],
+      "lessonPath": "chapters/getting-started-nextjs.md",
+      "exerciseId": "nextjs-routing"
+    },
+    {
+      "id": "react-server-components",
+      "title": "Introducing React Server Components",
+      "summary": "Separate server data access, interactive client code, serializable props, and authenticated server actions.",
+      "estimatedMinutes": 90,
+      "objectives": [
+        "Separate server data work from client interaction",
+        "Send only serializable public props",
+        "Validate actions and forward credentials server-side"
+      ],
+      "prerequisites": [
+        "getting-started-nextjs"
+      ],
+      "lessonPath": "chapters/react-server-components.md",
+      "exerciseId": "nextjs-routing"
+    },
+    {
+      "id": "advanced-nextjs-optimization",
+      "title": "Advanced Next.js Concepts and Optimizations",
+      "summary": "Choose explicit cache lifetimes, narrow client boundaries, asset behavior, and observable performance budgets.",
+      "estimatedMinutes": 90,
+      "objectives": [
+        "Define explicit cache identity and lifetime",
+        "Inspect asset dimensions and client boundaries",
+        "Measure a reproducible performance budget"
+      ],
+      "prerequisites": [
+        "react-server-components"
+      ],
+      "lessonPath": "chapters/advanced-nextjs-optimization.md",
+      "exerciseId": "caching-performance"
+    },
+    {
+      "id": "deploying-nextjs",
+      "title": "Deploying a Next.js App",
+      "summary": "Build, configure, release, smoke-test, and roll back a Next frontend with a separate durable API.",
+      "estimatedMinutes": 90,
+      "objectives": [
+        "Configure separate frontend, API, and storage hosts",
+        "Verify a production artifact through its public domain",
+        "Record smoke checks and a tested rollback target"
+      ],
+      "prerequisites": [
+        "advanced-nextjs-optimization"
+      ],
+      "lessonPath": "chapters/deploying-nextjs.md",
+      "exerciseId": "production-workflows"
+    },
+    {
+      "id": "deeper-full-stack-development",
+      "title": "Diving Deeper into Full-Stack Development",
+      "summary": "Complete the Field Notes capstone, review evidence, and choose a next area of deliberate practice.",
+      "estimatedMinutes": 90,
+      "objectives": [
+        "Demonstrate the complete notebook lifecycle",
+        "Collect negative, accessibility, and release evidence",
+        "Write a retrospective and choose one next improvement"
+      ],
+      "prerequisites": [
+        "deploying-nextjs"
+      ],
+      "lessonPath": "chapters/deeper-full-stack-development.md",
+      "exerciseId": "capstone"
     }
   ],
   "completion": {
-    "requiredChapters": ["foundations", "javascript-typescript", "react-components", "nextjs-routing", "data-and-forms", "quality-accessibility-security", "production-workflows", "capstone"],
-    "capstone": "capstone",
-    "rule": "Practice every chapter, record checkpoint results and reflections, and review actual capstone acceptance evidence. Reading or self-marking alone does not verify skill. Draft progress is local and is not a credential."
+    "requiredChapters": [
+      "preparing-full-stack-development",
+      "nodejs-and-mongodb",
+      "express-mongoose-and-jest",
+      "react-and-tanstack-query",
+      "docker-and-cicd",
+      "jwt-authentication",
+      "server-side-rendering",
+      "search-engine-optimization",
+      "playwright-end-to-end-testing",
+      "mongodb-and-victory-analytics",
+      "graphql-backend",
+      "apollo-client-frontend",
+      "express-socketio-backend",
+      "realtime-react-frontend",
+      "mongodb-event-persistence",
+      "getting-started-nextjs",
+      "react-server-components",
+      "advanced-nextjs-optimization",
+      "deploying-nextjs",
+      "deeper-full-stack-development"
+    ],
+    "capstone": "deeper-full-stack-development",
+    "rule": "Read all chapters and pass their browser checkpoints; collect separate capstone project evidence for human review."
   },
   "references": [
     {
-      "title": "Download Node.js",
-      "author": "Node.js contributors",
-      "url": "https://nodejs.org/en/download",
-      "status": "Official installation destination linked for reference; no source content redistributed",
+      "title": "Preparing for Full-Stack Development \u2014 primary documentation",
+      "author": "vite.dev",
+      "url": "https://vite.dev/guide/",
+      "status": "Official documentation; linked reference; original course prose and examples",
       "accessedOn": "2026-10-16",
-      "chapters": ["foundations"]
+      "chapters": [
+        "preparing-full-stack-development"
+      ]
     },
     {
-      "title": "Test runner",
-      "author": "Node.js contributors",
-      "url": "https://nodejs.org/api/test.html",
-      "status": "Official documentation linked for reference; original examples, no source content redistributed",
+      "title": "Getting to Know Node.js and MongoDB \u2014 primary documentation",
+      "author": "nodejs.org",
+      "url": "https://nodejs.org/docs/latest-v24.x/api/fs.html",
+      "status": "Official documentation; linked reference; original course prose and examples",
       "accessedOn": "2026-10-16",
-      "chapters": ["foundations", "quality-accessibility-security"]
+      "chapters": [
+        "nodejs-and-mongodb"
+      ]
     },
     {
-      "title": "Your First Component",
-      "author": "React team",
-      "url": "https://react.dev/learn/your-first-component",
-      "status": "Official documentation linked for reference; original examples, no source content redistributed",
+      "title": "Implementing a Backend Using Express, Mongoose ODM, and Jest \u2014 primary documentation",
+      "author": "expressjs.com",
+      "url": "https://expressjs.com/en/5x/api/",
+      "status": "Official documentation; linked reference; original course prose and examples",
       "accessedOn": "2026-10-16",
-      "chapters": ["foundations"]
+      "chapters": [
+        "express-mongoose-and-jest"
+      ]
     },
     {
-      "title": "Everyday Types",
-      "author": "Microsoft TypeScript team",
-      "url": "https://www.typescriptlang.org/docs/handbook/2/everyday-types.html",
-      "status": "Official documentation linked for reference; original examples, no source content redistributed",
+      "title": "Integrating a Frontend Using React and TanStack Query \u2014 primary documentation",
+      "author": "tanstack.com",
+      "url": "https://tanstack.com/query/latest/docs/framework/react/guides/queries",
+      "status": "Official documentation; linked reference; original course prose and examples",
       "accessedOn": "2026-10-16",
-      "chapters": ["javascript-typescript"]
+      "chapters": [
+        "react-and-tanstack-query"
+      ]
     },
     {
-      "title": "State: A Component's Memory",
-      "author": "React team",
-      "url": "https://react.dev/learn/state-a-components-memory",
-      "status": "Official documentation linked for reference; original examples, no source content redistributed",
+      "title": "Deploying the Application with Docker and CI/CD \u2014 primary documentation",
+      "author": "docs.docker.com",
+      "url": "https://docs.docker.com/build/building/best-practices/",
+      "status": "Official documentation; linked reference; original course prose and examples",
       "accessedOn": "2026-10-16",
-      "chapters": ["react-components"]
+      "chapters": [
+        "docker-and-cicd"
+      ]
     },
     {
-      "title": "Server and Client Components",
-      "author": "Vercel Next.js team",
+      "title": "Adding Authentication with JWT \u2014 primary documentation",
+      "author": "nodejs.org",
+      "url": "https://nodejs.org/docs/latest-v24.x/api/crypto.html",
+      "status": "Official documentation; linked reference; original course prose and examples",
+      "accessedOn": "2026-10-16",
+      "chapters": [
+        "jwt-authentication"
+      ]
+    },
+    {
+      "title": "Improving the Load Time Using Server-Side Rendering \u2014 primary documentation",
+      "author": "react.dev",
+      "url": "https://react.dev/reference/react-dom/client/hydrateRoot",
+      "status": "Official documentation; linked reference; original course prose and examples",
+      "accessedOn": "2026-10-16",
+      "chapters": [
+        "server-side-rendering"
+      ]
+    },
+    {
+      "title": "Making Sure Customers Find You with Search Engine Optimization \u2014 primary documentation",
+      "author": "developers.google.com",
+      "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+      "status": "Official documentation; linked reference; original course prose and examples",
+      "accessedOn": "2026-10-16",
+      "chapters": [
+        "search-engine-optimization"
+      ]
+    },
+    {
+      "title": "Implementing End-to-End Tests Using Playwright \u2014 primary documentation",
+      "author": "playwright.dev",
+      "url": "https://playwright.dev/docs/test-fixtures",
+      "status": "Official documentation; linked reference; original course prose and examples",
+      "accessedOn": "2026-10-16",
+      "chapters": [
+        "playwright-end-to-end-testing"
+      ]
+    },
+    {
+      "title": "Aggregating and Visualizing Statistics Using MongoDB and Victory \u2014 primary documentation",
+      "author": "www.mongodb.com",
+      "url": "https://www.mongodb.com/docs/manual/core/aggregation-pipeline/",
+      "status": "Official documentation; linked reference; original course prose and examples",
+      "accessedOn": "2026-10-16",
+      "chapters": [
+        "mongodb-and-victory-analytics"
+      ]
+    },
+    {
+      "title": "Building a Backend with a GraphQL API \u2014 primary documentation",
+      "author": "graphql.org",
+      "url": "https://graphql.org/learn/security/",
+      "status": "Official documentation; linked reference; original course prose and examples",
+      "accessedOn": "2026-10-16",
+      "chapters": [
+        "graphql-backend"
+      ]
+    },
+    {
+      "title": "Interfacing with GraphQL on the Frontend Using Apollo Client \u2014 primary documentation",
+      "author": "www.apollographql.com",
+      "url": "https://www.apollographql.com/docs/react/data/queries",
+      "status": "Official documentation; linked reference; original course prose and examples",
+      "accessedOn": "2026-10-16",
+      "chapters": [
+        "apollo-client-frontend"
+      ]
+    },
+    {
+      "title": "Building an Event-Based Backend Using Express and Socket.IO \u2014 primary documentation",
+      "author": "socket.io",
+      "url": "https://socket.io/docs/v4/delivery-guarantees/",
+      "status": "Official documentation; linked reference; original course prose and examples",
+      "accessedOn": "2026-10-16",
+      "chapters": [
+        "express-socketio-backend"
+      ]
+    },
+    {
+      "title": "Creating a Frontend to Consume and Send Events \u2014 primary documentation",
+      "author": "socket.io",
+      "url": "https://socket.io/docs/v4/react",
+      "status": "Official documentation; linked reference; original course prose and examples",
+      "accessedOn": "2026-10-16",
+      "chapters": [
+        "realtime-react-frontend"
+      ]
+    },
+    {
+      "title": "Adding Persistence to Socket.IO Using MongoDB \u2014 primary documentation",
+      "author": "www.mongodb.com",
+      "url": "https://www.mongodb.com/docs/manual/core/transactions/",
+      "status": "Official documentation; linked reference; original course prose and examples",
+      "accessedOn": "2026-10-16",
+      "chapters": [
+        "mongodb-event-persistence"
+      ]
+    },
+    {
+      "title": "Getting Started with Next.js \u2014 primary documentation",
+      "author": "nextjs.org",
+      "url": "https://nextjs.org/docs/app/getting-started/layouts-and-pages",
+      "status": "Official documentation; linked reference; original course prose and examples",
+      "accessedOn": "2026-10-16",
+      "chapters": [
+        "getting-started-nextjs"
+      ]
+    },
+    {
+      "title": "Introducing React Server Components \u2014 primary documentation",
+      "author": "nextjs.org",
       "url": "https://nextjs.org/docs/app/getting-started/server-and-client-components",
-      "status": "Official documentation linked for reference; original examples, no source content redistributed",
+      "status": "Official documentation; linked reference; original course prose and examples",
       "accessedOn": "2026-10-16",
-      "chapters": ["nextjs-routing"]
+      "chapters": [
+        "react-server-components"
+      ]
     },
     {
-      "title": "Installation",
-      "author": "Vercel Next.js team",
-      "url": "https://nextjs.org/docs/app/getting-started/installation",
-      "status": "Official documentation linked for reference; original examples, no source content redistributed",
+      "title": "Advanced Next.js Concepts and Optimizations \u2014 primary documentation",
+      "author": "nextjs.org",
+      "url": "https://nextjs.org/docs/app/getting-started/caching-and-revalidating",
+      "status": "Official documentation; linked reference; original course prose and examples",
       "accessedOn": "2026-10-16",
-      "chapters": ["nextjs-routing"]
+      "chapters": [
+        "advanced-nextjs-optimization"
+      ]
     },
     {
-      "title": "Forms with Server Actions",
-      "author": "Vercel Next.js team",
-      "url": "https://nextjs.org/docs/app/guides/forms",
-      "status": "Official documentation linked for reference; original examples, no source content redistributed",
+      "title": "Deploying a Next.js App \u2014 primary documentation",
+      "author": "nextjs.org",
+      "url": "https://nextjs.org/docs/app/getting-started/deploying",
+      "status": "Official documentation; linked reference; original course prose and examples",
       "accessedOn": "2026-10-16",
-      "chapters": ["data-and-forms", "capstone"]
+      "chapters": [
+        "deploying-nextjs"
+      ]
     },
     {
-      "title": "Labeling Controls",
-      "author": "W3C Web Accessibility Initiative",
-      "url": "https://www.w3.org/WAI/tutorials/forms/labels/",
-      "status": "Official documentation linked for reference; original examples, no source content redistributed",
+      "title": "Diving Deeper into Full-Stack Development \u2014 primary documentation",
+      "author": "react.dev",
+      "url": "https://react.dev/learn/thinking-in-react",
+      "status": "Official documentation; linked reference; original course prose and examples",
       "accessedOn": "2026-10-16",
-      "chapters": ["quality-accessibility-security", "capstone"]
-    },
-    {
-      "title": "Understanding GitHub Actions",
-      "author": "GitHub documentation contributors",
-      "url": "https://docs.github.com/en/actions/get-started/understand-github-actions",
-      "status": "Official documentation linked for reference; original examples, no source content redistributed",
-      "accessedOn": "2026-10-16",
-      "chapters": ["production-workflows"]
+      "chapters": [
+        "deeper-full-stack-development"
+      ]
     }
   ]
 }
